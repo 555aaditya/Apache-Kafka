@@ -54,7 +54,7 @@ $ bin/kafka-console-producer.sh --topic <name> --bootstrap-server localhost:9092
 To read events from a topic in kafka  
 Run the following command on the terminal, replacing <name> with the name of the topic  
 ```
-$ bin/kafka-console-consumer.sh --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
+$ bin/kafka-console-consumer.sh --topic <name> --from-beginning --bootstrap-server localhost:9092
 Hello, World !
 This is my first topic !
 ```
