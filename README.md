@@ -10,7 +10,7 @@
 
 This is a repository  for adding files and commands while learning Apache Kafka
 
-### Downloading Kafka
+### (1) Downloading Kafka
 Kafka can be downloaded from the official website
 https://kafka.apache.org/downloads
 
@@ -19,6 +19,7 @@ Locate the folder for Kafka
 ```
 $ cd kafka_2.13-3.9.0
 ```
+### (2) Starting Kafka and Zookeeper Server
 To Start the **Zookeeper** Service,  
 Open your terminal in the Kafka directory  
 Run the following command on your terminal  
@@ -30,4 +31,19 @@ Open a new terminal in the Kafka directory
 Run the following command on your terminal
 ```
 $ bin/kafka-server-start.sh config/server.properties
+```
+### (3) Creating a topic
+To create a topic in kafka  
+Open a new terminal in the kafka directory  
+Run the following command on the terminal, replacing <name> with the name for your topic   
+```
+$ bin/kafka-topics.sh --create --topic <name> --bootstrap-server localhost:9092
+```
+### (4) Writing events to a topic
+To write events into a topic in kafka  
+Run the following command on the terminal, replacing <name> with the name for your topic  
+```
+$ bin/kafka-console-producer.sh --topic <name> --bootstrap-server localhost:9092
+> Hello, World !
+> This is my first topic !
 ```
