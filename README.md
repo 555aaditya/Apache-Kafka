@@ -39,11 +39,23 @@ Run the following command on the terminal, replacing <name> with the name for yo
 ```
 $ bin/kafka-topics.sh --create --topic <name> --bootstrap-server localhost:9092
 ```
+![image](public/create_topic.png)
+![image](public/list_topics.png)
 ### (4) Writing events to a topic
 To write events into a topic in kafka  
-Run the following command on the terminal, replacing <name> with the name for your topic  
+Run the following command on the terminal, replacing <name> with the name of the topic  
 ```
 $ bin/kafka-console-producer.sh --topic <name> --bootstrap-server localhost:9092
 > Hello, World !
 > This is my first topic !
 ```
+![image](public/writing_topic.png)
+### (4) Reading events from a topic
+To read events from a topic in kafka  
+Run the following command on the terminal, replacing <name> with the name of the topic  
+```
+$ bin/kafka-console-consumer.sh --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
+Hello, World !
+This is my first topic !
+```
+![image](public/reading_topic.png)
