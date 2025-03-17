@@ -1,11 +1,6 @@
 from kafka import KafkaConsumer
 
-consumer = KafkaConsumer(
-    'demo_topic',
-    bootstrap_servers='localhost:9092',
-    auto_offset_reset='earliest',  
-    enable_auto_commit=True       
-)
+consumer = KafkaConsumer('demo_topic', bootstrap_servers='localhost:9092')
 
 print("Listening for messages...")
 for message in consumer:
